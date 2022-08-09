@@ -39,8 +39,6 @@
                     currentDateIndicator: true,
                     dateTimeLabelFormats: {
                         week: 'S %W',
-                        start: 'Inicio',
-                        end: 'Final'
                     }
                 },
 
@@ -408,7 +406,46 @@
                         end: Date.UTC(2022, 10, 25),
                         parent: 'dgrh_laboral'
                         }]
+                    },{
+                    //DHAA / DGUEP / DGRI
+                    name: 'DHAA / DGUEP / DGRI',
+                    data: [
+                        {
+                        collapsed: true,
+                        name: 'DHAA / DGUEP / DGRI',
+                        id: 'dhaa_dguep_dgri',
+                        },{
+                        name: 'Solicitud de ocupación temporal de plazas vacantes de tiempo completo y medio tiempo.',
+                        start: Date.UTC(2023, 0, 04),
+                        end: Date.UTC(2023, 0, 31),
+                        parent: 'dhaa_dguep_dgri'
+                        }]
+                    },{
+                    //DGRH
+                    name: 'DGRH',
+                    data: [
+                        {
+                        collapsed: true,
+                        name: 'DGRH',
+                        id: 'dgrh_licencias',
+                        },{
+                        name: 'Actualización de licencias con goce y sin goce de sueldo.',
+                        start: Date.UTC(2023, 0, 31, 00),
+                        end: Date.UTC(2023, 0, 31, 11),
+                        parent: 'dgrh_licencias'
+                        }, {
+                        name: 'Actualización de horarios y cargas académicas.',
+                        start: Date.UTC(2023, 0, 31, 00),
+                        end: Date.UTC(2023, 0, 31, 11),
+                        parent: 'dgrh_licencias'
+                        }, {
+                        name: 'Proceso de revisión de cargas académicas.',
+                        start: Date.UTC(2022, 11, 19),
+                        end: Date.UTC(2023, 0, 31),
+                        parent: 'dgrh_licencias'
+                        }]
                     }
+
 
             //********
             //Final de la serie de datos
