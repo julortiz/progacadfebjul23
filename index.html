@@ -39,11 +39,45 @@
                 title: {
                     text: 'Cronograma de Actividades del Proceso de Gestión Académica-Administrativa Periodo Febrero-Julio 2023'
                 },
+                plotOptions: {
+                    series: {
+                        dataLabels: {
+                            enabled: false,
+                            format: '{point.name}',
+                            style: {
+                                cursor: 'default',
+                                pointerEvents: 'none'
+                            }
+                        }
+                    }
+                },
                 xAxis: {
                     currentDateIndicator: true,
                     dateTimeLabelFormats: {
                         week: 'S %W',
                     }
+                },
+                navigator: {
+                    enabled: true,
+                    liveRedraw: true,
+                    height: 40,
+                    series: {
+                        type: 'gantt',
+                        pointPlacement: 0.5,
+                        pointPadding: 0.25,
+                        accessibility: {
+                            enabled: false
+                        }
+                    },
+                    yAxis: {
+                        min: 0,
+                        max: 500,
+                        reversed: true,
+                        categories: []
+                    }
+                },
+                scrollbar: {
+                    enabled: true
                 },
                 tooltip: {
                     pointFormatter: function () {
@@ -54,11 +88,11 @@
                             value: point.name,
                             style: 'font-weight: bold;'
                         }, {
-                            title: 'Inicio',
+                            title: 'Inicia',
                             value: dateFormat(format, point.start)
                         }, {
                             visible: !options.milestone,
-                            title: 'Final',
+                            title: 'Termina',
                             value: dateFormat(format, point.end)
                         }];
 
