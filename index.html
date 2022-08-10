@@ -39,6 +39,9 @@
                 title: {
                     text: 'Cronograma de Actividades del Proceso de Gestión Académica-Administrativa Periodo Febrero-Julio 2023'
                 },
+                chart: {
+                    spacingLeft: 1
+                },
                 plotOptions: {
                     series: {
                         dataLabels: {
@@ -82,7 +85,7 @@
                 tooltip: {
                     pointFormatter: function () {
                         var point = this,
-                            format = '%A %e de %b de %Y ',
+                            format = '%A %e de %B de %Y ',
                             options = point.options,
                         lines = [{
                             value: point.name,
@@ -139,6 +142,7 @@
                         name: 'Generación de los archivos de insumo para PLANEA el Sistema Institucional de Programación (SIP).',
                         start: Date.UTC(2022, 07, 30),
                         end: Date.UTC(2022, 07, 31),
+                        milestone: true,
                         parent: 'dgdaie_ciies'
                         }, {
                         name: 'Actualización del Sistema PLANEA (SIP).',
@@ -158,10 +162,12 @@
                         collapsed: true,
                         name: 'Liberación de la programación académica homóloga anterior para su actualización.',
                         id: 'dgae_homologar',
+                        milestone: true,
                         },{
                         name: ' Primera sesión de tutorías (seguimiento de la trayectoria).',
                         start: Date.UTC(2022, 08, 12, 00,00),
                         end: Date.UTC(2022, 08, 12, 11, 59),
+                        milestone: true,
                         parent: 'dgae_homologar'
                     }]
                     },{
@@ -242,6 +248,7 @@
                         name: 'La DGRF activa la base de datos de la plantilla de personal de planta por entidades académicas e informa a todas las áreas involucradas.',
                         start: Date.UTC(2022, 09, 05, 00, 00),
                         end: Date.UTC(2022, 09, 05, 11, 59),
+                        milestone: true,
                         parent: 'dgrh_dgrf'
                     }]
                     },{
@@ -252,15 +259,18 @@
                         collapsed: true,
                         name: 'Integración de la programación académica con la plantilla de personal y banco de horas por las DGAA.',
                         id: 'banco_dgaa',
+                        milestone: true,
                         },{
                         name: 'Integración de la programación académica con la plantilla de personal y banco de horas por las DGAA.',
                         start: Date.UTC(2022, 09, 05, 00, 00),
                         end: Date.UTC(2022, 09, 05, 11, 59),
+                        milestone: true,
                         parent: 'banco_dgaa'
                         }, {
                         name: 'Validación de la información por las Áreas Académicas con los lineamientos emitidos por la SA y  la Secrataria de Administración y Finanzas (SAF).',
                         start: Date.UTC(2022, 09, 05, 00, 00),
                         end: Date.UTC(2022, 09, 05, 11, 59),
+                        milestone: true,
                         parent: 'banco_dgaa'
                     }]
                     },{
@@ -305,25 +315,6 @@
                         start: Date.UTC(2022, 09, 05),
                         end: Date.UTC(2022, 10, 07),
                         parent: 'dgrh_dgrf_dgaa_dguep'
-                    }]
-                    },{
-                    //DGAA / DGUEP / Dirección general de Relaciones Internacionales (DGRI)
-                    name: 'DGAA / DGUEP / Dirección general de Relaciones Internacionales (DGRI)',
-                    data: [
-                        {
-                        collapsed: true,
-                        name: 'DGAA / DGUEP / Dirección general de Relaciones Internacionales (DGRI)',
-                        id: 'dgaa_dguep_dgri',
-                        },{
-                        name: 'Difusión de las EE vacantes a las DGAA, Dirección General de Investigaciones (DGI), Dirección General de Difusión Cultural  (DGDC) y DGUEP, para efecto de reubicación, complementos de carga de investigadores, ejecutantes y técnicos académicos.',
-                        start: Date.UTC(2022, 09, 18),
-                        end: Date.UTC(2022, 10, 08),
-                        parent: 'dgaa_dguep_dgri'
-                        }, {
-                        name: 'Fecha límite para recepción de solicitudes de año Sabático.',
-                        start: Date.UTC(2022, 09, 05),
-                        end: Date.UTC(2022, 10, 07),
-                        parent: 'dgaa_dguep_dgri'
                     }]
                     },{
                     //DGAA / DGUEP / Dirección general de Relaciones Internacionales (DGRI)
@@ -408,11 +399,13 @@
                         name: 'Envío del Instrumento de Evaluación para las Convocatorias de EE vacantes a las DGAA para su distribución entre las EA.',
                         start: Date.UTC(2022, 10, 22, 00, 00),
                         end: Date.UTC(2022, 10, 22, 11, 59),
+                        milestone: true,
                         parent: 'dgaa_dguep_dgri_formatos'
                         }, {
                         name: 'Publicación de dictámenes de año Sabático.',
                         start: Date.UTC(2022, 10, 28, 00, 00),
                         end: Date.UTC(2022, 10, 28, 11, 59),
+                        milestone: true,
                         parent: 'dgaa_dguep_dgri_formatos'
                         }, {
                         name: 'Publicación de Convocatoria de EE por Programa Educativo con oferta autorizada.',
@@ -503,11 +496,13 @@
                         name: 'Actualización de licencias con goce y sin goce de sueldo',
                         start: Date.UTC(2023, 0, 31, 00),
                         end: Date.UTC(2023, 0, 31, 11),
+                        milestone: true,
                         parent: 'dgrh_licencias'
                         }, {
                         name: 'Actualización de horarios y cargas académicas',
                         start: Date.UTC(2023, 0, 31, 00),
                         end: Date.UTC(2023, 0, 31, 11),
+                        milestone: true,
                         parent: 'dgrh_licencias'
                         }, {
                         name: 'Proceso de revisión de cargas académicas',
@@ -518,16 +513,19 @@
                         name: 'Respaldo de cargas académicas periodo febrero-julio 2023',
                         start: Date.UTC(2023, 0, 04, 00),
                         end: Date.UTC(2023, 0, 04, 11),
+                        milestone: true,
                         parent: 'dgrh_licencias'
                         }, {
                         name: 'Liberación de reportes de cargas académicas',
                         start: Date.UTC(2023, 0, 05, 00),
                         end: Date.UTC(2023, 0, 05, 11),
+                        milestone: true,
                         parent: 'dgrh_licencias'
                         }, {
                         name: 'Envío de CD con reporte de cargas académicas y horarios de la Revisión de Cargas Académicas al Sindicato Estatal de Personal Académico de la de la Universidad Veracruzana (FESAPAUV)',
                         start: Date.UTC(2023, 0, 05),
                         end: Date.UTC(2023, 0, 06),
+                        
                         parent: 'dgrh_licencias'
                         }, {
                         name: 'Revisión de cargas académicas (Presencial/Virtual)',
@@ -535,6 +533,7 @@
                         start: Date.UTC(2023, 0, 12, 00),
                         end: Date.UTC(2023, 0, 12, 11),
                         parent: 'dgrh_licencias',
+                        milestone: true,
                         id: 'dgrh_licencias_virtual'
                         }, 
                             //Anidado para las regiones
@@ -542,14 +541,16 @@
                             name: 'Región Coatzacoalcos-Minatitlán',
                             start: Date.UTC(2023, 0, 12, 00),
                             end: Date.UTC(2023, 0, 12, 11),
+                            milestone: true,
                             parent: 'dgrh_licencias_virtual'
                             },{
                             name: 'Región Orizaba-Córdoba',
                             start: Date.UTC(2023, 0, 13, 00),
                             end: Date.UTC(2023, 0, 13, 11),
+                            milestone: true,
                             parent: 'dgrh_licencias_virtual'
                             },{
-                            name: 'Región Xalapa.',
+                            name: 'Región Xalapa',
                             start: Date.UTC(2023, 0, 16),
                             end: Date.UTC(2023, 0, 18),
                             parent: 'dgrh_licencias_virtual'
@@ -557,11 +558,13 @@
                             name: 'Región Poza Rica-Tuxpan',
                             start: Date.UTC(2023, 0, 19, 00),
                             end: Date.UTC(2023, 0, 19, 11),
+                            milestone: true,
                             parent: 'dgrh_licencias_virtual'
                             },{
                             name: 'Región Veracruz',
                             start: Date.UTC(2023, 0, 20, 00),
                             end: Date.UTC(2023, 0, 20, 11),
+                            milestone: true,
                             parent: 'dgrh_licencias_virtual'
                             }
                         ]
@@ -622,9 +625,10 @@
                         end: Date.UTC(2023, 0, 24),
                         parent: 'dgrh_movimientos'
                         },{
-                        name: 'Genera proceso de cambio de semestre para su afectación en la nómina (de archivos a la Nómina).',
+                        name: 'Genera proceso de cambio de semestre para su afectación en la nómina (de archivos a la Nómina)',
                         start: Date.UTC(2023, 0, 27, 00),
                         end: Date.UTC(2023, 0, 27, 11),
+                        milestone: true,
                         parent: 'dgrh_movimientos'
                         }]
                     },{
@@ -663,6 +667,7 @@
                         name: 'Aviso de EE vacantes para personal académico interino',
                         start: Date.UTC(2023, 0, 31, 00),
                         end: Date.UTC(2023, 0, 31, 11),
+                        milestone: true,
                         parent: 'ea_dgaa_dgrf_dgrh_avisos'
                         },{
                         name: 'Cierre y apertura de secciones de EE por parte de la EA (se requiere la notificación inmediata de cierres para evitar pagos indebidos del personal académico)',
@@ -688,11 +693,13 @@
                         name: 'Inicio de clases Licenciatura / Posgrado',
                         start: Date.UTC(2023, 0, 06, 00),
                         end: Date.UTC(2023, 0, 06, 11),
+                        milestone: true,
                         parent: 'ea_dgaa_dgrf_dgrh_avisos'
                         },{
                         name: 'Inicio de clases Sistema de Enseñanza Abierta (SEA)',
                         start: Date.UTC(2023, 0, 01, 00),
                         end: Date.UTC(2023, 0, 01, 11),
+                        milestone: true,
                         parent: 'ea_dgaa_dgrf_dgrh_avisos'
                         },{
                         name: 'Contratación del personal académico de EE convocadas (Escolarizado/ SEA)',
