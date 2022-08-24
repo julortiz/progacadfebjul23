@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script src="https://code.highcharts.com/gantt/highcharts-gantt.js"></script>
+    <style>
+      #grafica_academica {
+        max-width: 1000px;
+        min-width: 800px;
+        height: 800px;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <div id="grafica_academica"></div>
@@ -13,7 +21,7 @@
     <script type="text/javascript">
       Highcharts.setOptions({
         global: {
-          useUTC: false,
+          useUTC: true,
         },
         lang: {
           months: [
@@ -73,6 +81,15 @@
 
       // THE CHART
       Highcharts.ganttChart("grafica_academica", {
+        chart: {
+          scrollablePlotArea: {
+            minHeight: 100,
+          },
+          marginRight: 0,
+        },
+        credits: {
+          enabled: false,
+        },
         title: {
           text: "Cronograma de Actividades del Proceso de Gestión Académica-Administrativa Periodo Febrero-Julio 2023",
         },
@@ -96,6 +113,9 @@
           dateTimeLabelFormats: {
             week: { list: ["Semana %W", "S%W"] },
           },
+        },
+        scrollbar: {
+          enabled: true,
         },
         navigator: {
           enabled: true,
