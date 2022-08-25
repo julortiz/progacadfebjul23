@@ -81,12 +81,12 @@
 
       // THE CHART
       Highcharts.ganttChart("grafica_academica", {
-        chart: {
-          scrollablePlotArea: {
-            minHeight: 100,
-          },
-          marginRight: 0,
-        },
+        // chart: {
+        //   scrollablePlotArea: {
+        //     minHeight: 100,
+        //   },
+        //   marginRight: 0,
+        // },
         credits: {
           enabled: false,
         },
@@ -184,13 +184,14 @@
               {
                 collapsed: colapsado,
                 name: "Dirección General de Desarrollo Académico e Innovación Educativa (DGDAIE) / Centro de Investigación e Innovación en Educación Superior (CIIES)",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s5",
               },
               {
                 name: "Generación de los archivos de insumo para PLANEA del Sistema Institucional de Programación (SIP).",
                 start: Date.UTC(2022, 07, 30),
                 end: Date.UTC(2022, 07, 31),
-                milestone: true,
                 parent: "s5",
               },
               {
@@ -232,14 +233,14 @@
               {
                 collapsed: colapsado,
                 name: "EA / CIIES / DGDAIE / DGAE / Dirección General de Recursos Humanos (DGRH) / Dirección General de Recursos Financieros (DGRF)",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s7",
-                milestone: true,
               },
               {
                 name: "Apoyo y acompañamiento a las facultades, institutos y posgrado.",
                 start: Date.UTC(2022, 08, 13),
                 end: Date.UTC(2022, 08, 24),
-                milestone: true,
                 parent: "s7",
               },
             ],
@@ -251,6 +252,8 @@
               {
                 collapsed: colapsado,
                 name: "DGDAIE / EA",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s8",
               },
               {
@@ -274,6 +277,8 @@
               {
                 collapsed: colapsado,
                 name: "EA / Dirección General de la Unidad de Estudios de Posgrado (DGUEP)",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s9",
               },
               {
@@ -304,11 +309,13 @@
           }, //*********************************************
           {
             //DGRH / Dirección General de Recursos Financieros (DGRF)
-            name: "DGRH / Dirección General de Recursos Financieros (DGRF) ",
+            name: "DGRH / Dirección General de Recursos Financieros (DGRF)",
             data: [
               {
                 collapsed: colapsado,
-                name: "DGRH / Dirección General de Recursos Financieros (DGRF) ",
+                name: "DGRH / Dirección General de Recursos Financieros (DGRF)",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s10",
               },
               {
@@ -338,6 +345,8 @@
               {
                 collapsed: colapsado,
                 name: "EA / Dirección General de la Unidad de Estudios de Posgrado (DGUEP)",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s11",
               },
               {
@@ -363,6 +372,8 @@
               {
                 collapsed: colapsado,
                 name: "EA / Dirección General de la Unidad de Estudios de Posgrado (DGUEP)",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s12",
               },
               {
@@ -386,6 +397,8 @@
               {
                 collapsed: colapsado,
                 name: "Dictaminación de las DGAA de la Oferta Académica cumpliendo la normatividad aplicable.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s01",
               },
               {
@@ -433,6 +446,8 @@
               {
                 collapsed: colapsado,
                 name: "Tercera sesión de tutorías (orientación para la IL).",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s14",
               },
               {
@@ -450,6 +465,8 @@
               {
                 collapsed: colapsado,
                 name: "Generación y autorización de la Oferta Académica por Programa Educativo/Posgrado, atendiendo lo establecido en la normatividad aplicable.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s15",
               },
               {
@@ -479,6 +496,8 @@
               {
                 collapsed: colapsado,
                 name: "Envío de formatos de descarga y/o comisiones académicas o institucionales a la DGRH.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s16",
               },
               {
@@ -528,6 +547,8 @@
               {
                 collapsed: colapsado,
                 name: "Generación de la oferta de la programación académica para la preinscripción en línea.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s17",
               },
               {
@@ -557,6 +578,8 @@
               {
                 collapsed: colapsado,
                 name: "Análisis de la preinscripción en línea y PLANEA.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a18",
               },
               {
@@ -580,6 +603,8 @@
               {
                 collapsed: colapsado,
                 name: "Recepción de solicitudes de año sabático para su validación laboral y presupuestal.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a19",
               },
               {
@@ -597,6 +622,8 @@
               {
                 collapsed: colapsado,
                 name: "Solicitud de ocupación temporal de plazas vacantes de tiempo completo y medio tiempo.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "s20",
               },
               {
@@ -699,6 +726,8 @@
               {
                 collapsed: colapsado,
                 name: "Publicación de resultados de la Convocatoria de EE vacantes (subir las publicaciones de resultados en el portal institucional de las entidades convocadas).",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a21",
               },
               {
@@ -716,6 +745,8 @@
               {
                 collapsed: colapsado,
                 name: "Generación de la oferta académica para inscripción en línea.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a22",
               },
               {
@@ -757,6 +788,8 @@
               {
                 collapsed: colapsado,
                 name: "Recepción de formatos de propuesta-movimiento de personal de las EE convocadas sin inconformidad o, en su caso, al siguiente día hábil de haberse resuelto la inconformidad (con los documentos de resolución) y de acuerdo al calendario de recepción de documentos para el trámite de pago de la Dirección de Personal 2022.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a23",
               },
               {
@@ -781,6 +814,8 @@
               {
                 collapsed: colapsado,
                 name: "Fecha límite para el trámite de pago de académicos visitantes ante la DGRH, que imparten EE en el periodo Intersemestral de Invierno 2023.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a24",
               },
               {
@@ -805,6 +840,8 @@
               {
                 collapsed: colapsado,
                 name: "Aviso de EE vacantes para personal académico interino.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a25",
               },
               {
@@ -886,6 +923,8 @@
               {
                 collapsed: colapsado,
                 name: "Registrar y documentar los horarios de la plantilla del Personal Académico docente y no docente.",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
                 id: "a26",
               },
               {
