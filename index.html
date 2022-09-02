@@ -21,7 +21,7 @@
     <script type="text/javascript">
       Highcharts.setOptions({
         global: {
-          useUTC: false,
+          useUTC: true,
         },
         lang: {
           months: [
@@ -77,6 +77,7 @@
       today.setUTCMinutes(0);
       today.setUTCSeconds(0);
       today.setUTCMilliseconds(0);
+      //Especificar que todas las opciones estén colapsadas o no
       var colapsado = false;
 
       // THE CHART
@@ -104,7 +105,14 @@
           },
         },
         xAxis: {
-          currentDateIndicator: true,
+          currentDateIndicator: {
+            width: 1,
+            dashStyle: "dot",
+            color: "red",
+            label: {
+              format: "%A %e de %B de %Y",
+            },
+          },
           dateTimeLabelFormats: {
             week: { list: ["Semana %W", "S%W"] },
           },
@@ -134,7 +142,7 @@
         tooltip: {
           pointFormatter: function () {
             var point = this,
-              format = "%A %e de %B de %Y ",
+              format = "%A %e de %B de %Y",
               options = point.options,
               lines = [
                 {
@@ -206,7 +214,7 @@
             data: [
               {
                 collapsed: colapsado,
-                name: "Liberación de la programación académica homóloga anterior para su actualización.",
+                name: "Dirección General de Administración Escolar (DGAE)",
                 id: "s6",
               },
               {
@@ -337,7 +345,7 @@
             data: [
               {
                 collapsed: colapsado,
-                name: "SA / DGAA / DGUEP",
+                name: "Secretaría Académica (SA) / DGAA / DGUEP",
                 id: "s11",
               },
               {
@@ -387,7 +395,7 @@
             data: [
               {
                 collapsed: colapsado,
-                name: "Dictaminación de las DGAA de la Oferta Académica cumpliendo la normatividad aplicable.",
+                name: "DGRH / DGRF / DGAA / DGUEP",
                 start: Date.UTC(2022, 07, 30),
                 end: Date.UTC(2022, 07, 30),
                 id: "s01",
@@ -612,7 +620,7 @@
             data: [
               {
                 collapsed: colapsado,
-                name: "DGRH",
+                name: "DGAA / DGUEP / DGRI",
                 start: Date.UTC(2022, 07, 30),
                 end: Date.UTC(2022, 07, 30),
                 id: "s20",
@@ -629,19 +637,29 @@
                 end: Date.UTC(2023, 0, 31),
                 parent: "s20",
               },
+            ],
+          },
+          {
+            //DGRH
+            name: "DGRH",
+            data: [
+              {
+                collapsed: colapsado,
+                name: "DGRH",
+                start: Date.UTC(2022, 07, 30),
+                end: Date.UTC(2022, 07, 30),
+              },
               {
                 name: "39. Actualización de licencias con goce y sin goce de sueldo.",
                 start: Date.UTC(2022, 10, 29),
                 end: Date.UTC(2022, 11, 15),
-                parent: "s20",
               },
               {
                 collapsed: colapsado,
                 name: "40. Actualización de horarios y cargas académicas.",
                 start: Date.UTC(2022, 10, 29),
                 end: Date.UTC(2022, 11, 15),
-                parent: "s20",
-                id: "s20a",
+                id: "s30b",
               },
               //Sub categoría
               {
@@ -649,75 +667,75 @@
                 name: "41.1 Proceso de revisión de cargas académicas.",
                 start: Date.UTC(2022, 11, 19),
                 end: Date.UTC(2023, 0, 31),
-                parent: "s20a",
+                parent: "s30b",
               },
               {
                 name: "41.2 Solicitud de apoyo a Vicerrectorías para revisión de cargas académicas (presencial/virtual).",
                 start: Date.UTC(2022, 11, 19),
                 end: Date.UTC(2022, 11, 20),
-                parent: "s20a",
+                parent: "s30b",
               },
               {
                 name: "41.3 Respaldo de cargas académicas periodo febrero-julio 2023.",
                 start: Date.UTC(2023, 0, 04, 0),
                 end: Date.UTC(2023, 0, 04, 11),
                 milestone: true,
-                parent: "s20a",
+                parent: "s30b",
               },
               {
                 name: "41.4 Liberación de reportes de cargas académicas.",
                 start: Date.UTC(2023, 0, 05, 0),
                 end: Date.UTC(2023, 0, 05, 11),
                 milestone: true,
-                parent: "s20a",
+                parent: "s30b",
               },
               {
                 name: "41.5 Envío de CD con reporte de cargas académicas y horarios de la Revisión de Cargas Académicas al Sindicato Estatal de Personal Académico de la Universidad Veracruzana (FESAPAUV).",
                 start: Date.UTC(2023, 0, 05),
                 end: Date.UTC(2023, 0, 06),
-                parent: "s20a",
+                parent: "s30b",
               },
               {
                 collapsed: colapsado,
                 name: "41.6 Revisión de cargas académicas (presencial/virtual).",
                 start: Date.UTC(2023, 0, 12),
                 end: Date.UTC(2023, 0, 20),
-                parent: "s20a",
-                id: "s20ab",
+                parent: "s30b",
+                id: "s30ab",
               },
               {
                 name: "41.6.1 Región Coatzacoalcos-Minatitlán.",
                 start: Date.UTC(2023, 0, 12, 0),
                 end: Date.UTC(2023, 0, 12, 11),
                 milestone: true,
-                parent: "s20ab",
+                parent: "s30ab",
               },
               {
                 name: "41.6.2 Región Orizaba-Córdoba.",
                 start: Date.UTC(2023, 0, 13, 0),
                 end: Date.UTC(2023, 0, 13, 11),
                 milestone: true,
-                parent: "s20ab",
+                parent: "s30ab",
               },
               {
                 name: "41.6.3 Región Xalapa.",
                 start: Date.UTC(2023, 0, 16),
                 end: Date.UTC(2023, 0, 18),
-                parent: "s20ab",
+                parent: "s30ab",
               },
               {
                 name: "41.6.4 Región Poza Rica-Tuxpan.",
                 start: Date.UTC(2023, 0, 19, 0),
                 end: Date.UTC(2023, 0, 19, 11),
                 milestone: true,
-                parent: "s20ab",
+                parent: "s30ab",
               },
               {
                 name: "41.6.5 Región Veracruz.",
                 start: Date.UTC(2023, 0, 20, 0),
                 end: Date.UTC(2023, 0, 20, 11),
                 milestone: true,
-                parent: "s20ab",
+                parent: "s30ab",
               }, //Termina la subcategoría
             ],
           },
